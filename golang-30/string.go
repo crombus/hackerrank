@@ -9,7 +9,7 @@ func main() {
 	str := "THIS IS A TEST TEXT"
 	fmt.Println(strings.Contains(str, "TeST"))
 	fmt.Println(strings.Count(str, "TEST"))
-	fmt.Println(str[1:])
+	fmt.Println(str[:1])
 
 	str1 := "AABAACAADAABAABA"
 	pat := "AABA"
@@ -23,4 +23,13 @@ func main() {
 			h = false
 		}
 	}
+}
+
+func IsLetter(s string) bool {
+	for _, r := range s {
+		if (r < 'a' || r > 'z') && (r < 'A' || r > 'Z') {
+			return false
+		}
+	}
+	return true
 }
