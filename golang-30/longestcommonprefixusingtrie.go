@@ -53,7 +53,7 @@ func (t *trie) findLongestPrefix() string {
 	for t.countChildren() == 1 && t.root.isWordEnd == false {
 		t.root = t.root.childrens[index]
 		char := 97 + index
-		prefix += string(char)
+		prefix += fmt.Sprintf("%c", rune(char))
 	}
 	return prefix
 }
